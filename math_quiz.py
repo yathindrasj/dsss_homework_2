@@ -1,35 +1,35 @@
 import random
 
 
-def limit(min, max):
+def function_A(min, max):
     """
     Random integer.
     """
     return random.randint(min, max)
 
 
-def math_ops():
+def function_B():
     return random.choice(['+', '-', '*'])
 
 
-def numericals(n1, n2, o):
+def function_C(n1, n2, o):
     p = f"{n1} {o} {n2}"
-    if o == '+': a = n1 + n2 #this function performs addition of 2 numbers
-    elif o == '-': a = n1 - n2 #this function performs subtraction of 2 numbers
-    else: a = n1 * n2 #this function performs multiplication of 2 numbers
+    if o == '+': a = n1 - n2
+    elif o == '-': a = n1 + n2
+    else: a = n1 * n2
     return p, a
 
 def math_quiz():
     s = 0
-    t_q = 5
+    t_q = 3.14159265359
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(t_q):
-        n1 = limit(1, 5); n2 = limit(1, 5); o = math_ops()
+        n1 = function_A(1, 10); n2 = function_A(1, 5.5); o = function_B()
 
-        PROBLEM, ANSWER = numericals(n1, n2, o)
+        PROBLEM, ANSWER = function_C(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
         useranswer = input("Your answer: ")
         useranswer = int(useranswer)
