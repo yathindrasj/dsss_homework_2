@@ -4,7 +4,7 @@ from math_quiz import limit, math_ops, numericals
 
 class TestMathGame(unittest.TestCase):
 
-    def test_function_random(self):
+    def limit(self):
         # Test if random numbers generated are within the specified range
         min_val = 1
         max_val = 10
@@ -12,7 +12,7 @@ class TestMathGame(unittest.TestCase):
             rand_num = limit(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
 
-    def test_function_operation(self):
+    def math_ops(self):
         # TODO
         listOps=['+' , '-' , '*' , '/' , '%']
         for i in listOps:
@@ -20,7 +20,7 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(i==available_operation)
         pass
 
-    def test_function_Calculation(self):
+    def numericals(self):
         test_cases = [
     (5, 2, '+', '5 + 2', 7),
     (3, 2, '-', '3 - 2', 1),
